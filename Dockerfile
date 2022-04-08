@@ -18,9 +18,9 @@ RUN \
     rm /var/lib/nginx/html/index.html
 
 # Files
-COPY nginx.conf /etc/nginx/nginx.conf
-COPY configure.sh /configure.sh
-COPY supervisord.conf /etc/supervisord.conf
+COPY /src/nginx.conf /etc/nginx/nginx.conf
+COPY /src/configure.sh /configure.sh
+COPY /src/supervisord.conf /etc/supervisord.conf
 COPY html /var/lib/nginx/html/
 
 # Ports
