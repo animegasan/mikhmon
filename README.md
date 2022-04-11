@@ -11,8 +11,6 @@ The image build on [Alpine Linux](http://www.alpinelinux.org) and [Mikhmon V3 by
 - php7-mbstring
 - php7-session
 - supervisor
-- bash
-- curl
 
 ## Credit
 [Laksamadi Guko](https://github.com/laksa19), [Hilman Maulana](https://github.com/animegasan).
