@@ -3,7 +3,7 @@
 # Nginx config
 adduser -D -g 'www' www
 chown -R www:www /var/lib/nginx
-mkdir /run/nginx && touch /run/nginx/nginx.pid
+#mkdir /run/nginx && touch /run/nginx/nginx.pid
 
 # Set variable PHP
 PHP_FPM_USER="www"
