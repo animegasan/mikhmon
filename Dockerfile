@@ -24,9 +24,8 @@ COPY /src/supervisord.conf /etc/supervisord.conf
 COPY html /var/lib/nginx/html/
 
 # Ports
-EXPOSE \
-    80/tcp
-    445/tcp
+EXPOSE 80/tcp
+EXPOSE 445/tcp
 
 # Config
 RUN sh /configure.sh
