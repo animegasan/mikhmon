@@ -6,13 +6,15 @@ LABEL Description = "MikroTik Hotspot Monitor (Mikhmon) is a web-based applicati
 # Setup document root
 WORKDIR /var/www/html
 
+# Mikhmon Version
+ARG MIKHMON_VERSION=version-4
+
 # Expose the port nginx is reachable on
 EXPOSE 80
 
 # Install packages
 RUN apk update && apk add --no-cache \
     nginx \
-    git \
     supervisor \
     php81 \
     php81-fpm \
@@ -41,7 +43,7 @@ RUN chown -R nobody.nobody /var/www/html /run /var/lib/nginx /var/log/nginx
 USER nobody
 
 # Add application
-RUN git clone https://github.com/laksa19/mikhmonv3.git /var/www/html/
+COPY --chown=nobody ${MIKHMON_VERSION} /var/www/html/
 
 # Let supervisord start nginx & php-fpm
 CMD ["/usr/bin/supervisord", "-c", "/etc/supervisor/conf.d/supervisord.conf"]
