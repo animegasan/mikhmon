@@ -1,3 +1,5 @@
+---
+
 <h1 align="center">Mikhmon</h1>
 <h3 align="center">The Free Software For Mikrotik Management</h3>
 
@@ -28,7 +30,33 @@ The architectures supported by this image are:
 
 ---
 
+## Usage
+Here are some example snippets to help you get started creating a container.
+### docker-compose (recommended)
+```yaml
+---
+version: "2.1"
+services:
+  mikhmon:
+    image: animega/mikhmon:latest
+    container_name: mikhmon
+    ports:
+      - 8080:80
+    restart: unless-stopped
+```
+### docker cli
+
+```bash
+docker run -d \
+  --name=mikhmon \
+  -p 8080:80 \
+  --restart unless-stopped \
+  animega/mikhmon:latest
+```
+---
+
 ## Packages
+The package used by this image are:
 - nginx
 - php
 - php81-fpm
@@ -38,5 +66,45 @@ The architectures supported by this image are:
 - php81-session
 - supervisor
 
+---
+
+## Version
+### Version 4 Beta
+* **4-4.2.2:**
+   - User Profile
+      - Fix expired mode notice.
+      - Expire date change to ```mmm/dd/yyyy hh:mm:ss N``` for notice and ```mmm/dd/yyyy hh:mm:ss X``` for remove.
+* **4-4.2.1:**
+   - User Profile
+      - Lock Server change to Disable/Enable. So, the hotspot server will be adjusted to the hotspot server where the user is logged in.
+* **4-4.2.0:**
+   - Dashboard
+      - Hotspot Active.
+      - Hotspot Users.
+      - Live Report.
+      - Disable/Enable from settings.
+      - App log.
+      - Hotspot log.
+   - Hotspot
+      - Users (add & remove user).
+      - User Profile (add remove profile).
+        - Add Lock Server mode.
+        - Lock the server hotspot after login.
+      - Active (remove active user).
+      - Host.
+      - @global filter.
+      - Generate Voucher.
+    - Log
+    - Report (global filter & download CSV and XLS).
+    - Template editor.
+    - New template format html. ([Here for template](https://laksa19.github.io/?mikhmon/v4/voucher))
+
+### Version 3
+* **3-3.20:** - Fixed typo script profile ```on-login```. (**Please update the user profile of Mikhmon, by opening each user profile, then Save.**)
+
+---
+
 ## Credit
 [Tim de Pater](https://github.com/TrafeX/docker-php-nginx), [Laksamadi Guko](https://github.com/laksa19), [Hilman Maulana](https://github.com/animegasan).
+
+---
