@@ -3,12 +3,6 @@ services:
   mikhmon:
     image: animega/mikhmon:latest
     container_name: mikhmon
-    environment:
-      - PUID=1000
-      - PGID=1000
-      - TZ=Asia/Jakarta
-    volumes:
-      - /portainer/mikhmon:/var/www/html
     ports:
       - 8080:80
     restart: unless-stopped
