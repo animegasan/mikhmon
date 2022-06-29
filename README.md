@@ -12,7 +12,9 @@
 MikroTik Hotspot Monitor (Mikhmon) is a web-based application (MikroTik API PHP class) to assist MikroTik Hotspot management.
 <br>
 The image build on <a href="http://www.alpinelinux.org" target="_blank">Alpine Linux</a>, <a href="https://github.com/laksa19/mikhmonv3" target="_blank">Mikhmon by Laksamadi Guko</a> and <a href="https://github.com/TrafeX/docker-php-nginx" target="_blank">Dockerfile by Trafex</a>.
-  
+
+---
+
 ## Packages
 - nginx
 - php
