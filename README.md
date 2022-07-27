@@ -19,7 +19,7 @@ The image build on <a href="http://www.alpinelinux.org" target="_blank">Alpine L
 ---
 
 ## Supported Architectures
-We utilise the docker manifest for multi-platform awareness. Simply pulling ```animega/mikhmon:latest``` should retrieve the correct image for your arch, but you can also pull specific arch images via tags.
+We utilise the docker manifest for multi-platform awareness. Simply pulling ```animegasan/mikhmon:latest``` should retrieve the correct image for your arch, but you can also pull specific arch images via tags.
 
 The architectures supported by this image are:
 
@@ -27,6 +27,7 @@ The architectures supported by this image are:
 | :----: | :----: | ---- |
 | x86-64 | ✅ | amd64-\<version tag\> |
 | arm64 | ✅ | arm64v8-\<version tag\> |
+| armhf	| ✅	| arm32v7-\<version tag\> |
 
 ---
 
@@ -38,7 +39,7 @@ Here are some example snippets to help you get started creating a container.
 version: "2.1"
 services:
   mikhmon:
-    image: animega/mikhmon:latest
+    image: animegasan/mikhmon:latest
     container_name: mikhmon
     ports:
       - 8080:80
@@ -51,7 +52,7 @@ docker run -d \
   --name=mikhmon \
   -p 8080:80 \
   --restart unless-stopped \
-  animega/mikhmon:latest
+  animegasan/mikhmon:latest
 ```
 ---
 
