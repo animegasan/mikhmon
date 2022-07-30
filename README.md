@@ -54,6 +54,19 @@ docker run -d \
   --restart unless-stopped \
   animegasan/mikhmon:latest
 ```
+
+---
+
+### Web Interface
+
+Open your web browser and visit the url http://<IP_ADDRESS>:8080 to have access to
+the Mikbotam's web interface.
+
+-   Default username: `mikhmon`
+-   Default password: `1234`
+
+**It's highly recommended to change the default access credentials on first start**.
+
 ---
 
 ## Packages
