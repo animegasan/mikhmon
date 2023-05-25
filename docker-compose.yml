@@ -1,7 +1,7 @@
 version: "2.1"
 services:
   mikhmon:
-    image: animega/mikhmon:latest
+    image: animegasan/mikhmon:latest
     container_name: mikhmon
     ports:
       - 8080:80
