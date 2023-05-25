@@ -59,7 +59,7 @@ docker run -d \
 
 ### Web Interface
 
-Open your web browser and visit the url `http://<IP_ADDRESS>:8080` to have access to the Mikbotam's web interface.
+Open your web browser and visit the url `http://<IP_ADDRESS>:8080` to have access to the Mikhmon's web interface.
 
 -   Default username: `mikhmon`
 -   Default password: `1234`
