@@ -29,6 +29,8 @@ The architectures supported by this image are:
 | arm64 | ✅ | arm64-\<version tag\> |
 | armhf	| ✅	| arm32v7-\<version tag\> |
 
+**Note : For Cloudflare Zero Trust users, recommended to use Mikhmon version 3 with tags `animegasan/mikhmon:v3-latest`**
+
 ---
 
 ## Usage
